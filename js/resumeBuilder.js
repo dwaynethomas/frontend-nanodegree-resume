@@ -49,7 +49,7 @@ var bio = {
             "twitter": "https://twitter.com/mdneue",
             "location": "Portland, Oregon, USA"
           },
-      "welcomeMessage": "welcome to d-wayne's online resume",
+      "welcomeMessage": "Welcome to cyborg d-wayne's online resume",
       "pictureURL":"images/dwayne.jpg",
       "skills": ["iOS testing", "Android testing", "browser testing", "html", "css", "jquery", "python",  "automation", "git","new technologies", "training"],
       "display": "function"
@@ -72,6 +72,41 @@ var projects = {
   ]
 };
 
+var education = {
+  "schools": [
+    {
+      "name": "Princeton University",
+      "location": "Princeton, NJ",
+      "degree": "  B.A.",
+      "dates": "June, 2000 - June, 2004"
+    },
+    {
+      "name": "University of Oregon",
+      "location": "Eugene, OR",
+      "degree": "  M.S.",
+      "dates": "June, 2007 - June, 2012"
+    }
+  ]
+};
+
+
+education.display = function() {
+  //uses jquery looping to fill out each entry for a job//
+    education.schools.forEach(function (school) {
+      //makes the project experience div exist//
+    $("#education").append(HTMLschoolStart);
+    //replaces spans with project information//
+
+    var formattedschoolName = HTMLschoolName.replace("%data%", school.name);
+    var formattedschoolDegree = HTMLschoolDegree.replace("%data%", school.degree);
+    var formattedschoolDates = HTMLschoolDates.replace("%data%", school.dates);
+
+    $(".education-entry:last").append(formattedschoolName);
+    $(".education-entry:last").append(formattedschoolDegree);
+    $(".education-entry:last").append(formattedschoolDates);
+
+  });
+};
 
 
 projects.display = function() {
@@ -151,10 +186,13 @@ bio.display = function()
 
 
 
+
+
+
 /*/////////// main /////////////////////////////////////*/
 
 bio.display();
 work.display();
 projects.display();
-/*education.display();
-$("#mapDiv").append(googleMap);*/
+education.display();
+$("#mapDiv").append(googleMap);
