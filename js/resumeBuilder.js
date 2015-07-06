@@ -85,6 +85,18 @@ var education = {
       "location": "Eugene, OR",
       "degree": "  M.S.",
       "dates": "June, 2007 - June, 2012"
+    },
+    {
+      "name": "Charles University",
+      "location": "Prague, Czech Republic",
+      "degree": "",
+      "dates": ""
+    },
+    {
+      "name": "St. Jago HS",
+      "location": "Spanish Town, Jamaica",
+      "degree": "",
+      "dates": ""
     }
   ]
 };
