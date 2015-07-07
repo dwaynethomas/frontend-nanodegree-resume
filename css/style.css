@@ -1,3 +1,5 @@
+/* Styles that apply to all elements on the page */
+
 * {
   padding:0;
   margin:0;
@@ -8,18 +10,19 @@
   overflow: auto;
 }
 
+/*aligns each entry*/
 .education-entry, .work-entry, .project-entry {
   padding-left: 5%;
   padding-right: 5%;
 }
-
+/*styles the header person name vivid orange*/
 h1 {
   font-size: 40px;
   color: #F5A623;
   line-height: 48px;
   display: inline;
 }
-
+/*styles the section headers */
 h2 {
   font-weight: bold;
   font-size: 24px;
@@ -28,6 +31,7 @@ h2 {
   padding: 10px;
 }
 
+/*styles the skills at a glance header */
 h3 {
   font-style: italic;
   font-size: 20px;
@@ -55,12 +59,13 @@ h2, h3, h4, h5 {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  max-width: 800px;
+  max-width: 100%;
   margin: 0 auto;
   justify-content: space-around;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
+  background-color: #2EA5FF;
 }
 #navemenu li {
   border-bottom-style: solid;
@@ -68,6 +73,7 @@ h2, h3, h4, h5 {
   border-color: white;
   padding: 0;
   border: none;
+  margin: 10px;
 }
 .sum-entry {
   padding-bottom: 10px;

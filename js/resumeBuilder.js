@@ -87,6 +87,12 @@ var education = {
       "dates": "June, 2007 - June, 2012"
     },
     {
+      "name": "City College",
+      "location": "NY, NY",
+      "degree": "  M.S.",
+      "dates": "June, 2004 - June, 2007"
+    },
+    {
       "name": "Charles University",
       "location": "Prague, Czech Republic",
       "degree": "",
@@ -101,37 +107,35 @@ var education = {
   ]
 };
 
-
+//defines function to display section data
 education.display = function() {
-  //uses jquery looping to fill out each entry for a job//
-    education.schools.forEach(function (school) {
-      //makes the project experience div exist//
+    //makes the section exist//
     $("#education").append(HTMLschoolStart);
-    //replaces spans with project information//
-
-    var formattedschoolName = HTMLschoolName.replace("%data%", school.name);
-    var formattedschoolDegree = HTMLschoolDegree.replace("%data%", school.degree);
-    var formattedschoolDates = HTMLschoolDates.replace("%data%", school.dates);
-
-    $(".education-entry:last").append(formattedschoolName);
-    $(".education-entry:last").append(formattedschoolDegree);
-    $(".education-entry:last").append(formattedschoolDates);
+    //uses jquery looping to fill out each entry //
+    education.schools.forEach(function (school) {
+      //defines javascript variables to fill html spans with information//
+      var formattedschoolName = HTMLschoolName.replace("%data%", school.name);
+          formattedschoolDegree = HTMLschoolDegree.replace("%data%", school.degree);
+          formattedschoolDates = HTMLschoolDates.replace("%data%", school.dates);
+      //fills html spans with information//
+      $(".education-entry:last").append(formattedschoolName);
+      $(".education-entry:last").append(formattedschoolDegree);
+      $(".education-entry:last").append(formattedschoolDates);
 
   });
 };
 
-
+//defines function to display section data
 projects.display = function() {
-  //uses jquery looping to fill out each entry for a job//
-    projects.projects.forEach(function (project) {
-      //makes the project experience div exist//
-    $("#projects").append(HTMLprojectStart);
-    //replaces spans with project information//
-
+  //makes the section exist//
+  $("#projects").append(HTMLprojectStart);
+  //uses jquery looping to fill out each entry//
+  projects.projects.forEach(function (project) {
+    //defines javascript variables to fill html spans with information//
     var formattedprojectTitle = HTMLprojectTitle.replace("%data%", project.title);
-    var formattedprojectDates = HTMLprojectDates.replace("%data%", project.dates);
-    var formattedprojectDescription = HTMLprojectDescription.replace("%data%", project.description);
-
+        formattedprojectDates = HTMLprojectDates.replace("%data%", project.dates);
+        formattedprojectDescription = HTMLprojectDescription.replace("%data%", project.description);
+    //fills html spans with information//
     $(".project-entry:last").append(formattedprojectTitle);
     $(".project-entry:last").append(formattedprojectDates);
     $(".project-entry:last").append(formattedprojectDescription);
@@ -139,37 +143,40 @@ projects.display = function() {
   });
 };
 
+//defines function to display section data
 work.display = function() {
-  //uses jquery looping to fill out each entry for a job//
-    work.jobs.forEach(function (job) {
-      //makes the work experience div exist//
-        $("#workExperience").append(HTMLworkStart);
-      //replaces spans with employment information//
-        var formattedworkEmployer = HTMLworkEmployer.replace("%data%", job.employer);
-        var formattedworkTitle = HTMLworkTitle.replace("%data%", job.title);
-        var formattedworkDates = HTMLworkDates.replace("%data%", job.dates);
-        var formattedworkDescription = HTMLworkDescription.replace("%data%", job.description);
-      //pretties employer and job title//
-        var formattedworkEmployerTitle = formattedworkEmployer + formattedworkTitle;
-      //decides what shows on the page//
-        $(".work-entry:last").append(formattedworkEmployerTitle);
-        $(".work-entry:last").append(formattedworkDates);
-        $(".work-entry:last").append(formattedworkDescription);
+  //makes the section exist//
+  $("#workExperience").append(HTMLworkStart);
+  //uses jquery looping to fill out each entry//
+  work.jobs.forEach(function (job) {
+      //defines javascript variables to fill html spans with information//
+      var formattedworkEmployer = HTMLworkEmployer.replace("%data%", job.employer);
+          formattedworkTitle = HTMLworkTitle.replace("%data%", job.title);
+          formattedworkDates = HTMLworkDates.replace("%data%", job.dates);
+          formattedworkDescription = HTMLworkDescription.replace("%data%", job.description);
+          //Pretties employer and job title//
+          formattedworkEmployerTitle = formattedworkEmployer + formattedworkTitle;
+      //fills html spans with information//
+      $(".work-entry:last").append(formattedworkEmployerTitle);
+      $(".work-entry:last").append(formattedworkDates);
+      $(".work-entry:last").append(formattedworkDescription);
     });
 };
 
 bio.display = function()
 {
+    //defines javascript variables to fill html spans with information//
     var formattedName = HTMLheaderName.replace("%data%",bio.name);
-      formattedRole = HTMLheaderRole.replace("%data%",bio.role);
-      formattedMobile = HTMLmobile.replace("%data%",bio.contacts.mobile);
-      formattedEmail = HTMLemail.replace("%data%",bio.contacts.email);
-      formattedGithub = HTMLgithub.replace("%data%",bio.contacts.github);
-      formattedblog = HTMLblog.replace("%data%",bio.contacts.github);
-      formattedLocation = HTMLlocation.replace("%data%",bio.contacts.location);
-      formattedBioPic = HTMLbioPic.replace("%data%", bio.pictureURL);
-      formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
+        formattedRole = HTMLheaderRole.replace("%data%",bio.role);
+        formattedMobile = HTMLmobile.replace("%data%",bio.contacts.mobile);
+        formattedEmail = HTMLemail.replace("%data%",bio.contacts.email);
+        formattedGithub = HTMLgithub.replace("%data%",bio.contacts.github);
+        formattedblog = HTMLblog.replace("%data%",bio.contacts.github);
+        formattedLocation = HTMLlocation.replace("%data%",bio.contacts.location);
+        formattedBioPic = HTMLbioPic.replace("%data%", bio.pictureURL);
+        formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
 
+    //fills html ids with information//
     $("#header").prepend(formattedRole)
         .prepend(formattedName);
 
@@ -186,18 +193,19 @@ bio.display = function()
     $("#header").append(formattedBioPic)
     .append(formattedWelcomeMsg);
 
+//If the skills section exists, fill it with info//
     if (bio.skills.length > 0) {
+        //makes the section exist//
         $('#header').append(HTMLskillsStart);
+        //uses jquery looping to fill out each entry//
         bio.skills.forEach(function (skill) {
             var formattedSkill = HTMLskills.replace("%data%", skill);
+            //fills ID with information//
             $('#skills').append(formattedSkill);
         });
     }
 
 };
-
-
-
 
 
 

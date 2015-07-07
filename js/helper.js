@@ -84,6 +84,7 @@ function logClicks(x,y) {
   console.log('x location: ' + x + '; y location: ' + y);
 }
 
+// logs the locations clicked on the page relative to the left top corner.
 $(document).click(function(loc) {
   logClicks(loc.pageX, loc.pageY);// your code goes here!
 });

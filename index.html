@@ -51,6 +51,22 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   <meta name="viewport" content="width=device-width">
 </head>
 <body unresolved>
+  <!--
+nav bar should help for responsive design and prevent extra scrolling.
+#to do: expand appropriate section information with each click of the menu
+  -->
+  <nav id="nav-bar">
+  <ul id="nav-menu">
+    <li><a class="nav-item" href="#workExperience">WORK</a>
+    </li>
+    <li><a class="nav-item" href="#projects">PROJECTS</a>
+    </li>
+    <li><a class="nav-item" href="#education">EDUCATION</a>
+    </li>
+    <li><a class="nav-item" href="#mapDiv">LIVED AND WORKED</a>
+    </li>
+  </ul>
+</nav>
   <div id="main">
 
     <!--
@@ -62,34 +78,27 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     <div id="header" class="center-content clearfix">
       <ul id="topContacts" class='flex-box'></ul>
     </div>
-    <nav id="nav-bar">
-    <ul id="nav-menu">
-      <li><a class="nav-item" href="#workExperience">WORK</a>
-      </li>
-      <li><a class="nav-item" href="#projects">PROJECTS</a>
-      </li>
-      <li><a class="nav-item" href="#education">EDUCATION</a>
-      </li>
-      <li><a class="nav-item" href="#mapDiv">LIVED AND WORKED</a>
-      </li>
-    </ul>
-    <div style='clear: both;'></div>
 
-      <details id="workExperience" class='gray'>
+    <div style='clear: both;'></div>
+    <!--
+    details are an html 5 element that provides more interactivity by showing and
+    hiding information. the element is supported in chrome browsers.
+    -->
+    <details id="workExperience" class='gray'>
         <summary>
-        <h2>Work Experience</h2>
+          <h2>Work Experience</h2>
         </summary>
     </details>
     </div>
     <details id="projects">
-      <summary>
-      <h2>Projects</h2>
-      </summary>
+        <summary>
+          <h2>Projects</h2>
+        </summary>
     </details>
     <details  id="education" class='gray'>
-      <summary>
-      <h2>Education</h2>
-      </summary>
+        <summary>
+          <h2>Education</h2>
+        </summary>
     </details>
     <div  id="mapDiv">
         <h2>Where I've Lived and Worked</h2>
