@@ -1,7 +1,11 @@
 
 ## Sources
-1. Color picker. http://www.colorhexa.com/999999
-2.
+# Color picker. http://www.colorhexa.com/999999
+# <details> - HTML (HyperText Markup Language) | MDN https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details
+# event.pageX http://api.jquery.com/event.pagex/
+# Google Maps JavaScript API https://developers.google.com/maps/documentation/javascript/tutorial
+
+
 ## How do I complete this project?
 
 1. Go to the [Javascript Basics course](https://www.udacity.com/course/ud804) and select "View Course Materials."
