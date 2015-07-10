@@ -43,7 +43,7 @@ var bio = {
       "name" : "Dwayne M. Thomas",
       "role" : "Information Technology Specialist",
       "contacts" : {
-            "mobile": "646-327-0231",
+            "mobile": "***-327-0231",
             "email": "mdneue@yahoo.com",
             "github": "https://github.com/dwaynethomas",
             "twitter": "https://twitter.com/mdneue",

@@ -6,6 +6,11 @@
   font-family: 'Roboto', sans-serif;
 }
 
+
+a {
+    display: inline-block;
+    font-style: italic;
+}
 .clearfix {
   overflow: auto;
 }
