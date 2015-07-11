@@ -62,15 +62,35 @@ var projects = {
     {
       "title": "Portfolio",
       "dates": "May 2015 - June 2015",
-      "description": "Responsive Design site"
+      "description": "Responsive Design site",
+      "pictureURL":"      images/garden.png"
     },
     {
       "title": "Globophone",
       "dates": "Jan 2015 - March 2015",
-      "description": "Online form for collecting and validating phone numbers"
+      "description": "Online form for collecting and validating phone numbers",
+      "pictureURL":"      images/worldinfo.png"
     }
   ]
 };
+
+
+var presentations = {
+  "presentations": [    
+    {
+      "title": "Quality Engineering for DevOps Customers - Software Quality Conference (PNSQC)",
+      "dates": "October 2014",
+      "description": "Presentation to 30 testers on professional development."
+    },
+    {
+      "title": "Code clubs for informal learning and software development discussions. - Software Quality Conference (PNSQC)",
+      "dates": "October 2015",
+      "description": "Presentation to 30 testers on professional development."
+    }
+    ]
+  };
+
+
 
 var education = {
   "schools": [
@@ -135,11 +155,31 @@ projects.display = function() {
     var formattedprojectTitle = HTMLprojectTitle.replace("%data%", project.title);
         formattedprojectDates = HTMLprojectDates.replace("%data%", project.dates);
         formattedprojectDescription = HTMLprojectDescription.replace("%data%", project.description);
+        formattedprojectPicture = HTMLprojectImage.replace("%data%", project.pictureURL);
     //fills html spans with information//
     $(".project-entry:last").append(formattedprojectTitle);
     $(".project-entry:last").append(formattedprojectDates);
     $(".project-entry:last").append(formattedprojectDescription);
+    $(".project-entry:last").append(formattedprojectPicture);
 
+  });
+};
+
+
+//defines function to display section data
+presentations.display = function() {
+  //makes the section exist//
+  $("#presentations").append(HTMLpresentationStart);
+  //uses jquery looping to fill out each entry//
+  presentations.presentations.forEach(function (presentation) {
+    //defines javascript variables to fill html spans with information//
+    var formattedpresentationTitle = HTMLpresentationsTitle.replace("%data%", presentation.title);
+        formattedpresentationDates = HTMLpresentationsDates.replace("%data%", presentation.dates);
+        formattedpresentationDescription = HTMLpresentationsDescription.replace("%data%", presentation.description);
+    //fills html spans with information//
+    $(".presentation-entry:last").append(formattedpresentationTitle);
+    $(".presentation-entry:last").append(formattedpresentationDates);
+    $(".presentation-entry:last").append(formattedpresentationDescription);
   });
 };
 
@@ -214,5 +254,6 @@ bio.display = function()
 bio.display();
 work.display();
 projects.display();
+presentations.display();
 education.display();
 $("#mapDiv").append(googleMap);

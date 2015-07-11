@@ -42,6 +42,11 @@ var HTMLprojectDates = '<div class="date-text">%data%</div>';
 var HTMLprojectDescription = '<p><br>%data%</p>';
 var HTMLprojectImage = '<img src="%data%">';
 
+var HTMLpresentationStart = '<div class="presentation-entry"></div>';
+var HTMLpresentationsTitle = '<a href="#">%data%</a>';
+var HTMLpresentationsDates = '<div class="date-text">%data%</div>';
+var HTMLpresentationsDescription = '<p><br>%data%</p>';
+
 var HTMLschoolStart = '<div class="education-entry"></div>';
 var HTMLschoolName = '<a href="#">%data%';
 var HTMLschoolDegree = ' -- %data%</a>';
