@@ -72,13 +72,17 @@ h2, h3, h4, h5 {
   flex-direction: row;
   background-color: #2EA5FF;
 }
-#navemenu li {
-  border-bottom-style: solid;
-  border-width: 1px;
-  border-color: white;
-  padding: 0;
-  border: none;
-  margin: 10px;
+
+#nav {
+    background-color: #333;
+    margin: 0;
+    overflow: hidden;
+}
+
+#nav-menu {
+    background-color: #2EA5FF;
+    margin: 0;
+    overflow: hidden;
 }
 .sum-entry {
   padding-bottom: 10px;

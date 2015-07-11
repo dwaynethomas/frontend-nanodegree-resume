@@ -76,7 +76,7 @@ var projects = {
 
 
 var presentations = {
-  "presentations": [    
+  "presentations": [
     {
       "title": "Quality Engineering for DevOps Customers - Software Quality Conference (PNSQC)",
       "dates": "October 2014",
