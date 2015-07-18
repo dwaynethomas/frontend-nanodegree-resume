@@ -58,6 +58,12 @@ var bio = {
 var projects = {
   "projects": [
     {
+      "title": "Online resume",
+      "dates": "June -July 2015",
+      "description": "Interactive html document",
+      "pictureURL": "images/dwayne2.jpg"
+    },
+    {
       "title": "Portfolio",
       "dates": "May 2015 - June 2015",
       "description": "Responsive Design site",
